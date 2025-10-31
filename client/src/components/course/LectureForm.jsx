@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import { toast } from 'react-hot-toast';
-import axios from 'axios';
+import api from '../../services/api';
 import { Upload, X, CheckCircle } from 'lucide-react';
 
 const LectureForm = ({ onSuccess }) => {
@@ -45,8 +45,8 @@ const LectureForm = ({ onSuccess }) => {
     try {
       setIsUploading(true);
       
-      const response = await axios.post(
-        `/api/v1/courses/${courseId}/lectures`,
+      const response = await api.post(
+        `/courses/${courseId}/lectures`,
         formData,
         {
           headers: {

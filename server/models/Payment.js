@@ -70,7 +70,6 @@ const paymentSchema = new mongoose.Schema({
 // Indexes for better performance
 paymentSchema.index({ user: 1 });
 paymentSchema.index({ course: 1 });
-paymentSchema.index({ stripePaymentIntentId: 1 });
 paymentSchema.index({ status: 1 });
 paymentSchema.index({ createdAt: -1 });
 

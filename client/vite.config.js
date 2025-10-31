@@ -16,7 +16,13 @@ export default defineConfig({
           vendor: ['react', 'react-dom', 'react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
         },
-        assetFileNames: 'assets/[name]-[hash][extname]',
+        assetFileNames: (assetInfo) => {
+          // Keep SVG and other public assets in root
+          if (assetInfo.name === 'vite.svg' || assetInfo.name.endsWith('.svg')) {
+            return '[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
       },
@@ -26,4 +32,5 @@ export default defineConfig({
     port: 5173,
     host: true,
   },
+  publicDir: 'public',
 })

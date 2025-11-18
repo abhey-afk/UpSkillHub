@@ -253,18 +253,6 @@ Special thanks to these amazing technologies and their communities:
 
 ---
 
-## ⭐ Star History
-
-<div align="center">
-
-If you find this project useful, please consider giving it a ⭐️!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=abhey-afk/UpSkillHub&type=Date)](https://star-history.com/#abhey-afk/UpSkillHub&Date)
-
-</div>
-
----
-
 <div align="center">
 
 ### 💖 Made with passion by **Abhey**

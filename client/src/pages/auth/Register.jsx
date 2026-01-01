@@ -32,18 +32,11 @@ const Register = () => {
         role: selectedRole
       };
       
-      const response = await authAPI.register(userData);
-      const { user, token } = response.data.data;
+      await authAPI.register(userData);
+      toast.success('Registration successful! Please login to continue.');
       
-      login(user, token);
-      toast.success(`Welcome to UpSkillHub, ${user.name}!`);
-      
-      // Redirect based on user role
-      const redirectPath = user.role === 'admin' ? '/admin/dashboard'
-                         : user.role === 'instructor' ? '/instructor/dashboard'
-                         : '/student/dashboard';
-      
-      navigate(redirectPath, { replace: true });
+      // Redirect to login page
+      navigate('/login', { replace: true });
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed. Please try again.');
     } finally {

@@ -331,7 +331,7 @@ function CourseDetail() {
   const minutes = totalDuration % 60;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pt-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -456,15 +456,17 @@ function CourseDetail() {
                 <h2 className="text-2xl font-semibold text-dark-900 mb-4">Course Curriculum</h2>
                 <div className="space-y-3">
                   {course.lessons.map((lesson, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex-col sm:flex-row sm:justify-between sm:items-start">
-                      <div className="flex-1 min-w-0">
-                        <div className="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium mb-2 sm:mb-0">
-                          {lesson.order || index + 1}
+                    <div key={index} className="flex items-start justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex-col sm:flex-row sm:items-start">
+                      <div className="flex-1 min-w-0 mb-3 sm:mb-0">
+                        <div className="flex items-center space-x-3 mb-2">
+                          <div className="w-8 h-8 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0">
+                            {lesson.order || index + 1}
+                          </div>
+                          <h3 className="font-medium text-gray-900">{lesson.title}</h3>
                         </div>
-                        <h3 className="font-medium text-gray-900">{lesson.title}</h3>
-                        <p className="text-sm text-gray-600">{lesson.description}</p>
+                        <p className="text-sm text-gray-600 ml-11">{lesson.description}</p>
                       </div>
-                      <div className="flex items-center space-x-2 text-sm text-gray-500 mt-2 sm:mt-0">
+                      <div className="flex items-center space-x-2 text-sm text-gray-500 sm:ml-4">
                         <Clock className="w-4 h-4" />
                         <span>{lesson.duration || 0} min</span>
                       </div>

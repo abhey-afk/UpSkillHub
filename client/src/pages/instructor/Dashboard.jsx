@@ -137,7 +137,7 @@ const InstructorDashboard = () => {
           {course.title}
         </h3>
 
-        <div className="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4 text-sm">
           <div className="text-center">
             <p className="font-semibold text-dark-900">{course.totalEnrollments}</p>
             <p className="text-gray-600">Students</p>
@@ -177,7 +177,7 @@ const InstructorDashboard = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen bg-gray-50 pt-16 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse">
             <div className="bg-gray-300 h-8 rounded w-1/3 mb-8"></div>
@@ -193,15 +193,15 @@ const InstructorDashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-4xl font-display font-bold text-dark-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-dark-900 mb-2">
               Instructor Dashboard
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Manage your courses and track your success
             </p>
           </div>

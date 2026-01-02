@@ -88,10 +88,10 @@ const Navbar = () => {
                 <div className="relative">
                   <button
                     onClick={() => setIsProfileOpen(!isProfileOpen)}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 transition-colors max-w-xs"
+                    className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 transition-colors w-full max-w-[150px]"
                   >
                     {getRoleIcon()}
-                    <span className="font-medium truncate">{user?.name}</span>
+                    <span className="font-medium text-sm truncate">{user?.name}</span>
                   </button>
                   
                   {isProfileOpen && (

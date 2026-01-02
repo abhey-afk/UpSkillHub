@@ -28,15 +28,15 @@ const SimpleAdminDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8 space-y-4 lg:space-y-0">
           <div className="flex-1">
-            <h1 className="text-3xl lg:text-4xl font-display font-bold text-dark-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-dark-900 mb-2">
               Admin Dashboard
             </h1>
-            <p className="text-lg lg:text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Welcome back, {user?.name}! Manage your platform and monitor performance
             </p>
           </div>

@@ -176,7 +176,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-bg particles-bg py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="gradient-bg particles-bg pt-16 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Floating decorative elements */}
         <div className="pointer-events-none absolute top-20 left-4 sm:left-10 w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="pointer-events-none absolute top-40 right-4 sm:right-10 w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 bg-luxury-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{animationDelay: '2s'}}></div>
@@ -190,15 +190,15 @@ const Home = () => {
               className="space-y-8"
             >
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium text-primary-700">
+                <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1.5 text-sm font-medium text-primary-700">
                   <Sparkles className="w-4 h-4" />
                   <span className="text-xs sm:text-sm">Empowering Your Learning Journey</span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-display font-bold text-dark-900 leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-dark-900 leading-tight">
                   Master New Skills with 
                   <span className="animated-gradient-text block">Premium Education</span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                   Join thousands of learners in their journey to excellence. Access world-class courses, 
                   learn from industry experts, and advance your career with our AI-enhanced platform.
                 </p>
@@ -217,9 +217,41 @@ const Home = () => {
 
               <div className="flex items-center space-x-8">
                 <div className="hidden sm:flex -space-x-2">
-                  {[1,2,3,4].map((i) => (
-                    <div key={i} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-300 border-2 border-white"></div>
-                  ))}
+                  <img 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format" 
+                    alt="Student 1" 
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face&auto=format";
+                    }}
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format" 
+                    alt="Student 2" 
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face&auto=format";
+                    }}
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format" 
+                    alt="Student 3" 
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format";
+                    }}
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face&auto=format" 
+                    alt="Student 4" 
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format";
+                    }}
+                  />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary-600 border-2 border-white flex items-center justify-center text-white text-xs sm:text-sm font-medium">
+                    +5K
+                  </div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-600">Join 50,000+ students already learning</div>
               </div>
